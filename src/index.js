@@ -27,6 +27,7 @@ async function onSearch(e) {
     imagesApiService.query = e.currentTarget.elements.searchQuery.value.trim();
 
     if (!imagesApiService.query) {
+        loadMoreBtn.hide();
         return Notify.info("Please, fill in the field!");
     }
     
